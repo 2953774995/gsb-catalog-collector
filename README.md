@@ -20,6 +20,13 @@ python3 -m pipeline.cli --db catalog.db --page-size 10
 python3 -m pytest -q      # 或 python3 -m unittest discover -s tests
 ```
 
+一键脚本：
+
+```bash
+bash start.sh     # 起 mock 门户 + 跑一轮采集，打印中文摘要
+bash test.sh      # 单测 + 端到端 7 项行为校验，逐条 PASS/FAIL
+```
+
 ## 行为说明
 
 - 限速：所有请求共享一个滑动窗口限速器（任意 1.05s 内最多 5 个），页与页之间、
